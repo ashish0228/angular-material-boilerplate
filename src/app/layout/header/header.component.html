@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button
+    *ngIf="!showLogout"
+    class="example-icon favorite-icon"
+    [routerLink]="['/login']"
+    aria-label="Example icon-button with heart icon" title="Login">
+      <mat-icon>login</mat-icon>
+    </button>
+    <button mat-icon-button
+    *ngIf="!showLogout"
+    class="example-icon"
+    [routerLink]="['/registration']"
+    aria-label="Example icon-button with share icon" title="Registration">
+      <mat-icon><span class="material-symbols-outlined">
+        app_registration
+        </span></mat-icon>
+    </button>
+
+    <button mat-icon-button
+    *ngIf="showLogout"
+    class="example-icon"
+    (click)="logout()"
+    aria-label="Example icon-button with share icon" title="Registration">
+      <mat-icon><span class="material-symbols-outlined">
+        logout
+        </span></mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
